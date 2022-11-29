@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1669063256 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\autoanalisis.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+	"Position.h"
+	"VarPublic.h"
+	"AutoAnalisis.h"
+	"VarArch.h"
+	"VerifPalRes.h"
+	"TokensStruct.h"
+
+1669062169 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\position.h
+
+1669695378 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\varpublic.h
+
+1669063288 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\autoanalisis.h
+	"TokensStruct.h"
+
+1669064684 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\tokensstruct.h
+
+1669062057 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\vararch.h
+
+1669062568 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\verifpalres.h
+
+1669062262 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\position.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"Position.h"
+
+1669064939 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\tokensstruct.c
+	<stdio.h>
+	<stdlib.h>
+	"TokensStruct.h"
+
+1669062692 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\verifpalres.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+	"VerifPalRes.h"
+
+1669699944 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"Position.h"
+	"VarPublic.h"
+	"VarArch.h"
+	"TokensStruct.h"
+	"AutoAnalisis.h"
+	"SintaxisProcess.h"
+
+1669689150 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.h
+	"TokensStruct.h"
+
+1669703220 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"SintaxisProcess.h"
+	"VarPublic.h"
+
