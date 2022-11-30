@@ -1,1 +1,7 @@
-int color="red"+2+4+2+"hola";
+if(1){
+	Color="Green";
+}
+
+while(x){
+	x=x+1;
+}

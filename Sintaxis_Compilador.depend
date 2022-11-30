@@ -62,7 +62,7 @@
 1669689150 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.h
 	"TokensStruct.h"
 
-1669797401 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.c
+1669825510 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
