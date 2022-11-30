@@ -3,6 +3,9 @@
 
 char Caracters;
 char CaractersAnt;
+
+int LineaSintaxis;
+int ColumnaSintaxis;
 struct nodo *aux;
 
 #endif // VARPUBLIC_H_INCLUDED

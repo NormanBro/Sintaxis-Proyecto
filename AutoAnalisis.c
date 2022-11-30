@@ -161,7 +161,7 @@ void AutoSymbol(struct TOKEN token,char CARACTER){
 
         switch(estado){
             case 1:
-                if( (Caracters==43 || Caracters==45) && (!isdigit(CaractersAnt) && !isalpha(CaractersAnt) )){
+                if( (Caracters==43 || Caracters==45) && (!isdigit(CaractersAnt) && !isalpha(CaractersAnt) && CaractersAnt!=34 )){
                     estado=2;
                     CADENA[inc]=Caracters;
                     inc++;

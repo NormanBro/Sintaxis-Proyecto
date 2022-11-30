@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1669063256 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\autoanalisis.c
+1669796879 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\autoanalisis.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -14,7 +14,7 @@
 
 1669062169 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\position.h
 
-1669695378 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\varpublic.h
+1669778593 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\varpublic.h
 
 1669063288 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\autoanalisis.h
 	"TokensStruct.h"
@@ -62,7 +62,7 @@
 1669689150 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.h
 	"TokensStruct.h"
 
-1669703220 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.c
+1669797401 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Position.h" />
+		<Unit filename="SintaxisProcess.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SintaxisProcess.h" />
 		<Unit filename="TokensStruct.c">
 			<Option compilerVar="CC" />
 		</Unit>
