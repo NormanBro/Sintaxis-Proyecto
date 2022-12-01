@@ -167,11 +167,11 @@ void AutoSymbol(struct TOKEN token,char CARACTER){
                     inc++;
                 }else if(Caracters==' '){
                     finalizar=1;
-                }else if( (Caracters==60 || Caracters ==62) ){
+                }/*else if( (Caracters==60 || Caracters ==62) ){
                     estado=3;
                     CADENA[inc]=Caracters;
                     inc++;
-                }else if( (Caracters>=33 || Caracters<=47) || (Caracters>=58 || Caracters<=64) || (Caracters>=91 || Caracters<=96) || (Caracters>=123 || Caracters<=126)){
+                }*/else if( (Caracters>=33 || Caracters<=47) || (Caracters>=58 || Caracters<=64) || (Caracters>=91 || Caracters<=96) || (Caracters>=123 || Caracters<=126)){
                     estado=4;
                     finalizar=1;
                     CADENA[inc]=Caracters;
@@ -208,7 +208,7 @@ void AutoSymbol(struct TOKEN token,char CARACTER){
         Caracters=fgetc(Arch);
     }//end While
 
-    if(estado==4){
+    if(estado==4 || estado==3){
         DecColum();
         token.Tipo=Sim;
         strcpy(token.Nombre,"Simbolo");

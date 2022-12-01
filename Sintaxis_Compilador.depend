@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1669796879 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\autoanalisis.c
+1669860479 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\autoanalisis.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -46,7 +46,7 @@
 	<ctype.h>
 	"VerifPalRes.h"
 
-1669699944 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\main.c
+1669860920 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -62,7 +62,7 @@
 1669689150 c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.h
 	"TokensStruct.h"
 
-1669825510 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.c
+1669908658 source:c:\users\jhosm\desktop\programas\c\sintaxis_compilador\sintaxisprocess.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
