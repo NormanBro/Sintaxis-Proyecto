@@ -10,11 +10,11 @@
 void ContenidoLlaves(){
 
     while(aux!=NULL){
-        printf("%s \n",aux->info.Lexeman);
         if(aux!=NULL)IDVariable();
         if(aux!=NULL)Variable();
         if(aux!=NULL)SentCondicional();
         if(aux!=NULL)SentCiclosMientras();
+        if(aux!=NULL)SentCicloPara();
 
         if(aux==NULL)break;
         if(strcasecmp(aux->info.Lexeman,"}")==0)break;
@@ -54,9 +54,17 @@ void Match(char* Expect){
 
 }
 
-int Opemasmen(){
-    if(strcmp(aux->info.Lexeman,"+")==0)return 1;
-    if(strcmp(aux->info.Lexeman,"-")==0)return 1;
+int OperSum(){
+    if(strcmp(aux->info.Lexeman,"+")==0){
+        return 1;
+    }
+    return 0;
+}
+
+int OperRes(){
+    if(strcmp(aux->info.Lexeman,"-")==0){
+        return 1;
+    }
     return 0;
 }
 
@@ -70,7 +78,23 @@ int Operador(){
     if(aux==NULL){
         ERROR(";");
     }
-    if(Opemasmen() || Opemuldiv()){
+    if(OperSum()){
+        SigAux();
+        if(OperSum()){
+            SigAux();
+        }
+        return 1;
+    }
+
+    if(OperRes()){
+        SigAux();
+        if(OperRes()){
+            SigAux();
+        }
+        return 1;
+    }
+
+    if(Opemuldiv()){
         SigAux();
         return 1;
     }
@@ -80,6 +104,8 @@ int Operador(){
 int Sentencias(){
     if(strcmp(aux->info.Lexeman,"if")==0)return 0;
     if(strcmp(aux->info.Lexeman,"while")==0)return 0;
+    if(strcmp(aux->info.Lexeman,"for")==0)return 0;
+
     return 1;
 }
 
@@ -89,18 +115,27 @@ void Term(){
         ERROR(";");
     }
 
+
     if(aux->info.Tipo==1 || aux->info.Tipo==2 || aux->info.Tipo==4){
 
+        printf("Lexeman:%s \n",aux->info.Lexeman);
         SigAux();
 
         if(Operador()){
+            Term();
+        }
+        if(MayorMenor()){
             Term();
         }
 
     }else if(strcmp(aux->info.Lexeman,"(")==0){
         Term();
         Match(")");
-    }else{
+    }else if(strcmp(aux->info.Lexeman,";")==0){
+
+    }else if(strcmp(aux->info.Lexeman,")")==0){
+    }
+    else{
         ERROR("Fallo en agregar valor");
     }
 
@@ -118,7 +153,7 @@ int MayorMenor(){
 }
 
 void Asicnadores(){
-    printf(" %s \n",aux->info.Lexeman);
+
     if(aux==NULL){
         ERROR(";");
         SigLineCol();
@@ -133,7 +168,6 @@ void Asicnadores(){
 }
 
 void Variable(){
-    printf("%s \n",aux->info.Lexeman);
     if(aux->info.Tipo==1 && Sentencias() ){
         SigAux();
         Asicnadores();
@@ -160,7 +194,7 @@ void Exp(){
     if(aux==NULL){
         ERROR("; o la falta de un valor");
     }
-    printf("%s \n",aux->info.Lexeman);
+
     if(aux->info.Tipo==1 || aux->info.Tipo==2 ){
         SigAux();
 
@@ -177,6 +211,18 @@ void Exp(){
 
 }
 
+void ExpFor(){
+
+    IDVariable();
+    if(!aux->info.Tipo==1 || !aux->info.Tipo==2){
+        Match(";");
+    }
+    Term();
+    Match(";");
+    Term();
+
+}
+
 void SentCondicional(){
 
     if(strcmp(aux->info.Lexeman,"if")==0){
@@ -184,10 +230,8 @@ void SentCondicional(){
 
         Match("(");
         Exp();
-        printf("%s \n",aux->info.Lexeman);
         Match(")");
         Match("{");
-        printf("%s \n",aux->info.Lexeman);
         ContenidoLlaves();
         Match("}");
     }
@@ -200,7 +244,19 @@ void SentCiclosMientras(){
         Match(")");
         Match("{");
         ContenidoLlaves();
-        printf("%s \n",aux->info.Lexeman);
+        if(aux!=NULL){
+            Match("}");
+        }
+    }
+}
+void SentCicloPara(){
+    if(strcmp(aux->info.Lexeman,"for")==0){
+        SigAux();
+        Match("(");
+        ExpFor();
+        Match(")");
+        Match("{");
+        ContenidoLlaves();
         if(aux!=NULL){
             Match("}");
         }
@@ -231,6 +287,7 @@ void ProccessSintexis(struct nodo *reco){
         if(aux!=NULL)Variable();
         if(aux!=NULL)SentCondicional();
         if(aux!=NULL)SentCiclosMientras();
+        if(aux!=NULL)SentCicloPara();
 
     }
     printf("No ha habido ningun problema");
